@@ -3015,6 +3015,9 @@ struct mg_connection *mg_mdns_listen(struct mg_mgr *mgr, mg_event_handler_t fn,
 #ifndef MG_JSON_MAX_DEPTH
 #define MG_JSON_MAX_DEPTH 30
 #endif
+#ifndef MG_JSON_MAX_NESTING
+#define MG_JSON_MAX_NESTING 60
+#endif
 
 // Error return values - negative. Successful returns are >= 0
 enum { MG_JSON_TOO_DEEP = -1, MG_JSON_INVALID = -2, MG_JSON_NOT_FOUND = -3 };
